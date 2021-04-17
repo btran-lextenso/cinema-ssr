@@ -1,23 +1,14 @@
 {#await getPerson()}
+
 <Loader />
 
 {:then}
 
-
-<div class="row star ma20">
-  <img src="https://ba-api.lpnt.fr/images/personne/{data.content.photo}" alt="" />
-  <div class="infos1 ma20">
-    <h1>{data.content.nom}</h1>
-    <p class="profession"> <b>Profession : </b>{data.content.profession}</p>
-    <p class="date_naissance"><b>Date de naissance : </b> {data.content.date_naissance}</p>
-    <p class="lieu_naissance"><b>Lieu de naissance : </b> {data.content.lieu_naissance}</p>
-    <p class="nationalite"><b>Nationalité : </b> {data.content.nationalite}</p>
-    <p class="bio"><b>Mini-bio : </b> {data.content.commentaire}</p>
-    <p class="small"><a href={data.content.url_dbpedia}>Sa fiche DBPedia</a></p>
-  </div>
-</div>
+<Bio photo={data.content.photo} nom={data.content.nom} profession={data.content.profession} date_naissance={data.content.date_naissance}
+lieu_naissance={data.content.lieu_naissance} nationalite={data.content.nationalite} commentaire={data.content.commentaire} url_dbpedia={data.content.url_dbpedia} />
 
 <div class="movies">
+
   <h2>{Object.keys(movies).length} {Object.keys(movies).length > '1' ? 'films' : 'film' } </h2>
 
   {#each Object.entries(movies) as [key, value]}
@@ -36,9 +27,9 @@
               </p>
             {/each}
         </dd>
-
     </dl>
   {/each}
+
 </div>
 
 {:catch error}
@@ -51,7 +42,7 @@
 import { ready } from '@roxi/routify'
 import { metatags } from '@roxi/routify'
 import Loader from '../_components/Loader.svelte'
-
+import Bio from '../_components/Bio.svelte'
 export let personne
 
 let data = {},

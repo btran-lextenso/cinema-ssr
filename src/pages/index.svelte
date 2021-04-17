@@ -23,16 +23,6 @@
 {:then persons}
 
     <ul class="persons">
-<!--      {#each persons as person}
-      <li>
-        <div class="photo">
-          <img src="https://ba-api.lpnt.fr/images/personne/{person.img}" alt="" />
-        </div>
-        <h2 class="fullname">{person.fullname}</h2>
-        <small class="date_naissance">{person.date_naissance}</small>
-        <p class="profession">{person.profession}</p>
-      </li>
-      {/each} -->
 
     {#each getFilteredPersons(persons, stringToMatch) as person, i}
       {#if i < 5}
@@ -76,7 +66,6 @@
   import Loader from './_components/Loader.svelte'
   import Lazy from 'svelte-lazy'
 
-
   let persons = [],
   profession = 'home',
   stringToMatch = '',
@@ -98,7 +87,6 @@
   let personsPromise = getPersons();
 
   function getFilteredPersons(persons, stringToMatch){
-
     if(stringToMatch){
       return persons.filter(person => {
         return person.fullname.toLowerCase().includes(stringToMatch.toLowerCase());
