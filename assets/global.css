@@ -1,0 +1,236 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  font-family: arial, verdana, sans-serif;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+a:link, a:visited{color:#000;}
+
+/*helpers*/
+.font-red{color:red;}
+.txtcenter{text-align: center}
+.ma10 {margin:10px;}
+.ma20 {margin:20px;}
+.capitalize {text-transform: capitalize;}
+.block {display: block}
+.w25 {width:25%;}
+.small {font-size: 0.8em}
+
+
+header, footer{
+  color: #fff;
+  padding: 20px;
+  background-color:#000;
+}
+header img {
+  margin: 0 auto;}
+header h1 {
+  font-size : 2em;
+  color:#c8a461;
+}
+header h1::after {
+  display:block;
+  content:"";
+  width:33% ;
+  border:3px solid #000;
+  margin:0 auto;
+}
+
+header a{
+  color:#c8a461 !important;
+  text-decoration: none;
+}
+
+.search {
+  background-color:#eee;
+  width:50%;
+  margin : 0 auto;
+  padding: 20px
+}
+.search label, .search select {
+  margin-right:10px;
+}
+.search_choice{
+  font-size: small
+}
+
+.msg_error_flux {
+  text-align: center;
+  padding : 200px;
+
+}
+
+.row.star {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start
+}
+.row.star img {
+  box-shadow: 3px 3px 8px #aaa;
+}
+.row.star .infos1 {
+  max-width:600px;
+  margin-top:  0
+}
+.movies h2{
+  text-align: center;
+  border-bottom: 5px solid #000;
+  width: 130px;
+  margin: 0 auto;
+}
+.movies dl{
+  width:900px;
+  margin: 40px auto;
+}
+.movies dl p.description{
+  padding: 15px;
+  font-style: italic
+}
+
+.movies dl::after{
+  content: "";
+  display: block;
+  width:5%;
+  border-bottom: 1px solid #000;
+  margin: 40px auto;
+}
+
+.movies dl:last-child::after{
+display: none
+}
+
+.movies dt{
+  background: url(/images/movie-placeholder.png) no-repeat;
+  background-size:contain;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+.movies dt img{
+  opacity: 0
+}
+.movies dd h3{
+display: inline
+}
+.persons .photo {
+  background: url(/images/person-placeholder.jpg) no-repeat;
+  background-size: contain;
+  text-align: center;
+}
+.persons a {
+text-decoration: none
+}
+
+.persons .photo img{
+  min-width: 250px;
+  min-height: 249px;
+  box-shadow: 3px 3px 8px #aaa;
+
+}
+.fullname::after{
+  content:"";
+  display: block;
+  width:10%;
+  height:1px;
+  background-color:#111;
+  margin-top: 10px;
+  margin-bottom:10px;
+}
+
+.persons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items:flex-start;
+}
+.persons li {
+  width: 250px;
+  min-height: 300px;
+  margin-bottom: 20px;
+}
+
+
+
+@media screen and (max-width: 640px) {
+  .movies dl {
+    width:100%;
+    padding : 0 10px;
+  }
+}
