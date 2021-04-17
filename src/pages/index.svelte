@@ -8,12 +8,10 @@
     <option value="producteurs">Producteurs</option>
   </select>
   <input type="search" placeholder="nom ou prénom" bind:value="{stringToMatch}">
-
 </form>
 </div>
-
 <p class="txtcenter ma20 search_choice">
-  <span class="capitalize">{profession ==='home' ? 'Tous' : profession }</span> { stringToMatch === '' ? '' : "et "+stringToMatch }
+  <span class="capitalize">{profession ==='home' ? 'Tous' : profession }</span> { stringToMatch === '' ? '' : "et "+stringToMatch}
 </p>
 
 
@@ -21,9 +19,7 @@
 <Loader />
 
 {:then persons}
-
-    <ul class="persons">
-
+  <ul class="persons">
     {#each getFilteredPersons(persons, stringToMatch) as person, i}
       {#if i < 5}
         <li>
@@ -35,6 +31,7 @@
           <p class="profession">{person.profession}</p>
 
         </li>
+
         {:else}
         <li>
           <div class="photo">
@@ -51,8 +48,7 @@
       {/if}
 
     {/each}
-
-    </ul>
+  </ul>
 
 <!-- {:catch error}
   <p class="font-red">Problème lors du chargement : {error}</p> -->
@@ -81,7 +77,6 @@
     //console.log(data.persons)
     $ready()
     return data.persons;
-    persons = data.persons;
   }
 
   let personsPromise = getPersons();
