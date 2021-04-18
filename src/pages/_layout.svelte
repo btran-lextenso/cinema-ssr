@@ -7,6 +7,7 @@
 </main>
 
 <BackToTop />
+<PageProgress color="linear-gradient(90deg, yellow 0%, #c8a461 100%)" height="2vh" />
 
 <footer>
   <p class="txtcenter">FOOTER</p>
@@ -14,4 +15,5 @@
 
 <script>
   import BackToTop from './_components/BackToTop.svelte'
+  import PageProgress from "svelte-page-progress"
 </script>
