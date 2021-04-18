@@ -7,7 +7,7 @@
 </main>
 
 <BackToTop />
-<PageProgress color="linear-gradient(90deg, yellow 0%, #c8a461 100%)" height="2vh" />
+<PageProgress color="linear-gradient(90deg, yellow 0%, #c8a461 100%)" height="1.2vh" />
 
 <footer>
   <p class="txtcenter">FOOTER</p>
