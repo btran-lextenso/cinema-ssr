@@ -21,20 +21,7 @@
   <ul class="persons">
     {#each getFilteredPersons(persons, stringToMatch) as person, i}
         <li>
-          <div class="photo">
-            <a href="/stars-du-cinema/{person.path}">
-              {#if i < 5}
-                <img src="https://ba-api.lpnt.fr/images/personne/{person.img}" alt="" />
-              {:else}
-                <Lazy height={300}>
-                  <img src="https://ba-api.lpnt.fr/images/personne/{person.img}" alt="" />
-                </Lazy>
-              {/if}
-            </a>
-          </div>
-          <h2 class="fullname"><a href="/stars-du-cinema/{person.path}">{person.fullname}</a></h2>
-          <small class="date_naissance">{person.date_naissance.replace(/(\d{4})-(\d{2})-(\d{2})/, '$3/$2/$1')}</small>
-          <p class="profession">{person.profession}</p>
+          <Person path={person.path} img={person.img} fullname={person.fullname} date_naissance={person.date_naissance} profession={person.profession} indice={i} />
         </li>
     {/each}
   </ul>
@@ -47,7 +34,7 @@
   import { ready } from '@roxi/routify'
   import { metatags } from '@roxi/routify'
   import Loader from './_components/Loader.svelte'
-  import Lazy from 'svelte-lazy'
+  import Person from './_components/Person.svelte'
 
   let persons = [],
   profession = 'home',
