@@ -1,0 +1,41 @@
+Last login: Sat Apr 17 19:08:33 on ttys000
+btran@air-de-bruno cinema-v2 % git log
+commit 418b5c905a559a6751306f10049029f6bf828c76 (HEAD -> master)
+Author: btran-lextenso <76538710+btran-lextenso@users.noreply.github.com>
+Date:   Sun Apr 18 21:22:40 2021 +0200
+
+    facto components
+
+commit 4ca8aa254124766617ad81c5bfd5d2cd1b24f6c1
+Author: btran-lextenso <76538710+btran-lextenso@users.noreply.github.com>
+Date:   Sat Apr 17 21:35:54 2021 +0200
+
+    ok
+
+commit 42d17fb232bcb1c423936144586b1b2e068d0bf6
+Author: btran-lextenso <76538710+btran-lextenso@users.noreply.github.com>
+Date:   Sat Apr 17 19:00:20 2021 +0200
+
+    avant modif hp composant form
+
+commit 467b7cc91a8246dc27471e374581a947498a0e7d
+Author: btran-lextenso <76538710+btran-lextenso@users.noreply.github.com>
+Date:   Sat Apr 17 17:07:11 2021 +0200
+
+    loader ok
+btran@air-de-bruno cinema-v2 %
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

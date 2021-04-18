@@ -38,8 +38,6 @@
         </li>
     {/each}
   </ul>
-{:catch error}
-  <p class="font-red">Autre problème lors du chargement : {error}</p>
 {/await}
 
 
@@ -47,6 +45,7 @@
   import { ready } from '@roxi/routify'
   import { metatags } from '@roxi/routify'
   import Loader from './_components/Loader.svelte'
+  //import Person from './_components/Person.svelte'
   import Lazy from 'svelte-lazy'
 
   let persons = [],
@@ -57,13 +56,12 @@
     let url = `https://www.devinez-le-film.fr/${profession}.json`;
     let response = await fetch(url);
     if (!response.ok) {
-      document.getElementById("main").innerHTML = `<p class="msg_error_flux">Problème lors du chargement des données. Envoyez ce message à l'administrateur : <br /> ${window.location.href}<br /> erreur code ${response.status}</p>`;
+      document.getElementById("main").innerHTML = `<p class="msg_error_flux">Problème lors du chargement des données. Envoyez ce message à l'administrateur : <br /> ${window.location.href} <br /> ${url} <br /> Code erreur ${response.status}</p>`;
       return [];
     }
     let data = await response.json();
-    //console.log(data.persons)
-    $ready()
     return data.persons;
+    $ready()
   }
 
   let personsPromise = getPersons();
@@ -80,5 +78,4 @@
 
 metatags.title = "Cinéma - page d'accueil"
 metatags.description = 'Description liste des stars du cinéma'
-
 </script>
