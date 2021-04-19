@@ -233,4 +233,10 @@ text-decoration: none
     width:100%;
     padding : 0 10px;
   }
+  .search {
+    width:70%;
+  }
+  .msg_error_flux{
+    padding:120px 20px;
+  }
 }

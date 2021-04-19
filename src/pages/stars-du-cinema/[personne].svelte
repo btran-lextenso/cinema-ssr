@@ -45,7 +45,7 @@ async function getPerson() {
   data = await response.json()
   movies = data.content.movies
   $ready()
-  return data.message
+  return data
 }
 
 metatags.title = "Cinéma - page star de cinéma "
