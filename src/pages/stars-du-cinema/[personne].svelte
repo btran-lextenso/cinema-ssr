@@ -38,17 +38,21 @@ import Bio from '../_components/Bio.svelte'
 export let personne
 
 let data = {},
-    movies = {};
+    movies = {},
+    meta_title,
+    meta_description;
 
 async function getPerson() {
   const response = await fetch(`https://www.devinez-le-film.fr/personnes/${personne}.json`);
   data = await response.json()
   movies = data.content.movies
+  meta_title = data.content.nom
+  meta_description = data.content.commentaire.substring(0,150)
   $ready()
   return data
 }
 
-metatags.title = "Cinéma - page star de cinéma "
-metatags.description = 'Description star de cinéma'
+$: metatags.title = meta_title + " - Cinéma SSR"
+$: metatags.description = meta_description
 
 </script>

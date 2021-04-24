@@ -65,7 +65,7 @@
     }
   }
 
-metatags.title = "Cinéma - page d'accueil"
-metatags.description = 'Description liste des stars du cinéma'
+metatags.title = "Cinéma SSR - page d'accueil"
+metatags.description = 'Liste des stars du cinéma'
 
 </script>
