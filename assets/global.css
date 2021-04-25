@@ -188,10 +188,24 @@ display: none
 .movies dd h3{
 display: inline
 }
+
+
+.persons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items:flex-start;
+}
+
 .persons .photo {
   background: url(/images/person-placeholder.jpg) no-repeat;
-  background-size: contain;
+  background-size: cover;
+  background-position: center center;
   text-align: center;
+}
+.persons h2 {
+  margin-top : 10px;
 }
 .persons a {
 text-decoration: none
@@ -201,6 +215,8 @@ text-decoration: none
   min-width: 250px;
   min-height: 249px;
   box-shadow: 3px 3px 8px #aaa;
+  height: 300px;
+  object-fit: cover;
 
 }
 .fullname::after{
@@ -213,17 +229,10 @@ text-decoration: none
   margin-bottom:10px;
 }
 
-.persons {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  align-items:flex-start;
-}
 .persons li {
   width: 250px;
   min-height: 300px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 

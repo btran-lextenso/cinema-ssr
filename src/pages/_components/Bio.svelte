@@ -18,6 +18,6 @@ export let url_dbpedia
     <p class="lieu_naissance"><b>Lieu de naissance : </b> {lieu_naissance}</p>
     <p class="nationalite"><b>Nationalité : </b> {nationalite}</p>
     <p class="bio"><b>Mini-bio : </b> {commentaire}</p>
-    <p class="small"><a href={url_dbpedia}>DBPedia</a></p>
+    <p class="small"><a href={url_dbpedia} target="_blank" title="{nom} Lien DBPedia (nouvelle fenêtre)">DBPedia</a></p>
   </div>
 </div>
