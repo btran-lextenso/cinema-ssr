@@ -1,8 +1,10 @@
 {#await getPerson()}
 <Loader />
+
 {:then}
-<Bio photo={data.content.photo} nom={data.content.nom} profession={data.content.profession} date_naissance={data.content.date_naissance}
-lieu_naissance={data.content.lieu_naissance} nationalite={data.content.nationalite} commentaire={data.content.commentaire} url_dbpedia={data.content.url_dbpedia} />
+<!-- <Bio photo={data.content.photo} nom={data.content.nom} profession={data.content.profession} date_naissance={data.content.date_naissance}
+lieu_naissance={data.content.lieu_naissance} nationalite={data.content.nationalite} commentaire={data.content.commentaire} url_dbpedia={data.content.url_dbpedia} /> -->
+<Bio {...data.content} />
 
 <div class="movies">
   <h2>{Object.keys(movies).length} {Object.keys(movies).length > '1' ? 'films' : 'film' } </h2>
@@ -25,6 +27,7 @@ lieu_naissance={data.content.lieu_naissance} nationalite={data.content.nationali
     </dl>
   {/each}
 </div>
+
 {:catch error}
 <p class="msg_error_flux">Problème lors du chargement des données. Envoyez ce message à l'administrateur : <br /> {window.location.href} <br /> {error}</p>
 {/await}
