@@ -2,8 +2,7 @@
 <Loader />
 
 {:then}
-<!-- <Bio photo={data.content.photo} nom={data.content.nom} profession={data.content.profession} date_naissance={data.content.date_naissance}
-lieu_naissance={data.content.lieu_naissance} nationalite={data.content.nationalite} commentaire={data.content.commentaire} url_dbpedia={data.content.url_dbpedia} /> -->
+
 <Bio {...data.content} />
 
 <div class="movies">
@@ -36,6 +35,7 @@ lieu_naissance={data.content.lieu_naissance} nationalite={data.content.nationali
 <script>
 import { ready } from '@roxi/routify'
 import { metatags } from '@roxi/routify'
+
 import Loader from '../_components/Loader.svelte'
 import Bio from '../_components/Bio.svelte'
 export let personne
